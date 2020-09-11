@@ -1,8 +1,7 @@
-﻿using OutdoorProducts.Models;
-using System.Linq;
+﻿using System.Linq;
 
 
-namespace SportsStore.Models
+namespace OutdoorProducts.Models
 {
     public class EFStoreRepository : IStoreRepository
     {

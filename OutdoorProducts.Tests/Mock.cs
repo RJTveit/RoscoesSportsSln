@@ -1,4 +1,4 @@
-﻿namespace SportsStore.Tests
+﻿namespace OutdoorProducts.Tests
 {
     internal class mock<T>
     {

@@ -10,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using OutdoorProducts.Models;
-using SportsStore.Models;
+
 
 namespace OutdoorProducts
 {
@@ -47,6 +47,8 @@ namespace OutdoorProducts
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("pagination", "Products/Page{productPage}", new { Controller = "Home", action = "Index" });
+
                 endpoints.MapDefaultControllerRoute();                                
             });
 
