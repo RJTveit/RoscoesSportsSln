@@ -12,10 +12,12 @@ namespace OutdoorProducts.Models
         {
             StoreDbContext context = app.ApplicationServices
             .CreateScope().ServiceProvider.GetRequiredService<StoreDbContext>();
+
             if (context.Database.GetPendingMigrations().Any())
             {
                 context.Database.Migrate();
             }
+
             if (!context.Products.Any())
             {
                 context.Products.AddRange(
