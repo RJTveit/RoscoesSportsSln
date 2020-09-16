@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using OutdoorProducts.Models;
 using Xunit;
@@ -44,8 +45,7 @@ namespace OutdoorProducts.Tests
             target.AddItem(p1, 1);
             target.AddItem(p2, 1);
             target.AddItem(p1, 10);
-            CartLine[] results = target.Lines
-            .OrderBy(c => c.Product.ProductID).ToArray();
+            CartLine[] results = target.Lines.OrderBy(c => c.Product.ProductID).ToArray();
 
             // Assert
             Assert.Equal(2, results.Length);

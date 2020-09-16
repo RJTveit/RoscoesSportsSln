@@ -10,7 +10,7 @@ using Xunit;
 
 namespace OutdoorProducts.Tests
 {
-    public class NavigationMenuViewComponent
+    public class NavigationMenuViewComponentTests
     {
         [Fact]
         public void Can_Select_Categories()
