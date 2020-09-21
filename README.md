@@ -11,3 +11,6 @@ Student project demo based on Adam Freeman's PRO ASP.NET Core 3 book. (https://w
     dotnet new xunit -o RoscoesSportsSln/OutdoorProducts.Tests --framework netcoreapp3.1
     dotnet sln RoscoesSportsSln add RoscoesSportsSln/OutdoorProducts.Tests 
     dotnet add RoscoesSportsSln/OutdoorProducts.Tests reference RoscoesSportsSln/OutdoorProducts 
+
+## Chapter 8 Additions
+
