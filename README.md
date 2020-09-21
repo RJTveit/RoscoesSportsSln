@@ -14,3 +14,10 @@ Student project demo based on Adam Freeman's PRO ASP.NET Core 3 book. (https://w
 
 ## Chapter 8 Additions
 
+![Image1](https://github.com/RJTveit/RoscoesSportsSln/blob/master/Screenshots/Sports%20Store%201.png)
+
+![Image2](https://github.com/RJTveit/RoscoesSportsSln/blob/master/Screenshots/Sports%20Store%202.png)
+
+![Image3](https://github.com/RJTveit/RoscoesSportsSln/blob/master/Screenshots/Sports%20Store%203.png)
+
+![Image4](https://github.com/RJTveit/RoscoesSportsSln/blob/master/Screenshots/Sports%20Store%204.png)
