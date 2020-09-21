@@ -20,4 +20,6 @@ Student project demo based on Adam Freeman's PRO ASP.NET Core 3 book. (https://w
 
 ![Image3](https://github.com/RJTveit/RoscoesSportsSln/blob/master/Screenshots/Sports%20Store%203.png)
 
+Currently troubleshooting the final test class.
+
 ![Image4](https://github.com/RJTveit/RoscoesSportsSln/blob/master/Screenshots/Sports%20Store%204.png)
