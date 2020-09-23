@@ -6,6 +6,7 @@ using OutdoorProducts.Models;
 using OutdoorProducts.Controllers;
 using OutdoorProducts.Models.ViewModels;
 using Xunit;
+using System;
 
 namespace OutdoorProducts.Tests
 {

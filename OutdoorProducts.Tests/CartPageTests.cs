@@ -34,6 +34,14 @@ namespace OutdoorProducts.Tests
             testCart.AddItem(p1, 2);
             testCart.AddItem(p2, 1);
 
+            // Action
+            CartModel cartModel = new CartModel(mockRepo.Object, testCart);
+            cartModel.OnGet("myUrl");
+
+            //Assert
+            Assert.Equal(2, cartModel.Cart.Lines.Count());
+            Assert.Equal("myUrl", cartModel.ReturnUrl);
+
             // - create a mock page context and session
             Mock<ISession> mockSession = new Mock<ISession>();
             byte[] data =
@@ -41,23 +49,7 @@ namespace OutdoorProducts.Tests
             mockSession.Setup(c => c.TryGetValue(It.IsAny<string>(), out data));
             Mock<HttpContext> mockContext = new Mock<HttpContext>();
             mockContext.SetupGet(c => c.Session).Returns(mockSession.Object);
-
-            // Action
-            CartModel cartModel = new CartModel(mockRepo.Object)
-            {
-                PageContext = new PageContext(new ActionContext
-                {
-                    HttpContext = mockContext.Object,
-                    RouteData = new RouteData(),
-                    ActionDescriptor = new PageActionDescriptor()
-                })
-            };
-
-            cartModel.OnGet("myUrl");
-
-            //Assert
-            Assert.Equal(2, cartModel.Cart.Lines.Count());
-            Assert.Equal("myUrl", cartModel.ReturnUrl);
+            
         }
 
         [Fact]
@@ -80,17 +72,9 @@ namespace OutdoorProducts.Tests
             mockContext.SetupGet(c => c.Session).Returns(mockSession.Object);
 
             // Action
-            CartModel cartModel = new CartModel(mockRepo.Object)
-            {
-                PageContext = new PageContext(new ActionContext
-                {
-                    HttpContext = mockContext.Object,
-                    RouteData = new RouteData(),
-                    ActionDescriptor = new PageActionDescriptor()
-                })
-            };
-
+            CartModel cartModel = new CartModel(mockRepo.Object, testCart);
             cartModel.OnPost(1, "myUrl");
+
             //Assert
             Assert.Single(testCart.Lines);
             Assert.Equal("P1", testCart.Lines.First().Product.Name);
