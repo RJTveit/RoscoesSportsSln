@@ -1,0 +1,8 @@
+{
+  "ConnectionStrings": {
+    "SportsStoreConnection": "\"Server=sqlserver;Database=RoscoesSportsDb;MultipleActiveResultSets=true;User=sa;",
+    "Password=MyDatabaseSecret123\",": null,
+    "IdentityConnection": "\"Server=sqlserver;Database=Identity;MultipleActiveResultSets=true;User=sa;Password=",
+    "MyDatabaseSecret123\""
+  }
+}
